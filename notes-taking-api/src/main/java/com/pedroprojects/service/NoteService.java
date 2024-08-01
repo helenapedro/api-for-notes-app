@@ -1,5 +1,6 @@
 package com.pedroprojects.service;
 
+import com.pedroprojects.exception.UnauthorizedException;
 import com.pedroprojects.model.Note;
 import com.pedroprojects.model.User;
 import com.pedroprojects.repository.NoteRepository;
@@ -43,10 +44,13 @@ public class NoteService {
         return noteRepository.save(note);
     }
 
-    public Note updateNote(Long id, Note update) {
+    public Note updateNote(Long id, Note update, User user) {
         Note note = getNoteById(id);
         if (note == null) {
             return null;
+        }
+        if (!note.getUser().getUid().equals(user.getUid())) {
+            throw new UnauthorizedException("You are not authorized to update this note.");
         }
         if (update.getTitle() != null) {
             note.setTitle(update.getTitle());
@@ -67,11 +71,15 @@ public class NoteService {
         return noteRepository.save(note);
     }
 
-    public boolean deleteNoteById(Long id) {
-        if (noteRepository.existsById(id)) {
-            noteRepository.deleteById(id);
-            return true;
+    public boolean deleteNoteById(Long id, User user) {
+        Note note = getNoteById(id);
+        if (note == null) {
+            return false;
         }
-        return false;
+        if (!note.getUser().getUid().equals(user.getUid())) {
+            throw new UnauthorizedException("You are not authorized to delete this note.");
+        }
+        noteRepository.deleteById(id);
+        return true;
     }
 }

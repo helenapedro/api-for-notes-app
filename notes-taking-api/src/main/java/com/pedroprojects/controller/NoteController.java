@@ -59,8 +59,11 @@ public class NoteController {
     }
 
     @PutMapping(value = "/{id}", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Note> updateNote(@PathVariable Long id, @RequestBody Note update) {
-        Note note = noteService.updateNote(id, update);
+    public ResponseEntity<Note> updateNote(Authentication authentication, @PathVariable Long id, @RequestBody Note update) {
+        String email = authentication.getName();
+        User user = userService.getUserByEmail(email)
+                .orElseThrow(() -> new RuntimeException("User not found"));
+        Note note = noteService.updateNote(id, update, user);
         if (note == null) {
             return ResponseEntity.notFound().build();
         }
@@ -68,8 +71,11 @@ public class NoteController {
     }
 
     @DeleteMapping(value = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Void> deleteNoteById(@PathVariable Long id) {
-        if (noteService.deleteNoteById(id)) {
+    public ResponseEntity<Void> deleteNoteById(Authentication authentication, @PathVariable Long id) {
+        String email = authentication.getName();
+        User user = userService.getUserByEmail(email)
+                .orElseThrow(() -> new RuntimeException("User not found"));
+        if (noteService.deleteNoteById(id, user)) {
             return ResponseEntity.ok().build();
         }
         return ResponseEntity.notFound().build();
