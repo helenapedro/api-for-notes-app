@@ -1,0 +1,35 @@
+-- Users table
+CREATE TABLE users (
+    uid BIGINT AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    firstname VARCHAR(255),
+    lastname VARCHAR(255),
+    createdAt TIMESTAMP,
+    updatedAt TIMESTAMP,
+    birthday DATE,
+    gender VARCHAR(50),
+    phoneNumber VARCHAR(20),
+    address VARCHAR(255)
+);
+
+-- Notes table
+CREATE TABLE notes (
+    nid BIGINT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255),
+    body TEXT,
+    createdBy VARCHAR(255),
+    createdAt TIMESTAMP,
+    updatedAt TIMESTAMP,
+    uid BIGINT,
+    FOREIGN KEY (uid) REFERENCES users(uid)
+);
+
+-- Edit history table
+CREATE TABLE edit_history (
+    note_id BIGINT,
+    editedBy VARCHAR(255),
+    editedAt TIMESTAMP,
+    idx INT,
+    FOREIGN KEY (note_id) REFERENCES notes(nid)
+);

@@ -1,0 +1,49 @@
+Funcionalidades Principais
+Autenticação e Registro de Usuários:
+
+Registro de Usuário: Qualquer pessoa pode criar uma conta de usuário enviando uma solicitação POST para /users/register com os detalhes necessários (email, senha, nome, etc.). O serviço UserService verifica se o email já está em uso e, em caso afirmativo, cria um novo usuário.
+Autenticação de Usuário: Os usuários podem se autenticar enviando uma solicitação POST para /users/authenticate com seu email e senha. Se as credenciais estiverem corretas, a API gera e retorna um token JWT.
+Gerenciamento de Notas:
+
+Criação de Notas: Usuários autenticados podem criar notas enviando uma solicitação POST para /notes com o ID do usuário e os detalhes da nota. A nota é associada ao usuário autenticado.
+Visualização de Notas: Usuários autenticados podem visualizar todas as suas notas enviando uma solicitação GET para /notes. Usuários admin podem ver todas as notas.
+Visualização de Nota por ID: Qualquer usuário autenticado pode visualizar uma nota específica pelo seu ID enviando uma solicitação GET para /notes/{id}.
+Atualização de Notas: Usuários autenticados podem atualizar suas notas enviando uma solicitação PUT para /notes/{id} com os novos detalhes da nota.
+Exclusão de Notas: Usuários autenticados podem excluir suas notas enviando uma solicitação DELETE para /notes/{id}.
+Controle de Acesso e Segurança:
+
+Filtros de JWT: O filtro JwtRequestFilter intercepta todas as solicitações e verifica a presença e a validade do token JWT. Se o token for válido, a autenticação é configurada no contexto de segurança.
+Configuração de Segurança: A configuração de segurança em SecurityConfiguration define que as rotas /users/authenticate e /users/register são acessíveis sem autenticação, enquanto todas as outras rotas requerem um token JWT válido.
+Componentes e Arquitetura
+Controllers:
+
+UserController: Lida com o registro e autenticação de usuários.
+NoteController: Lida com operações CRUD para notas.
+Services:
+
+UserService: Gerencia operações relacionadas a usuários, como criação, atualização, exclusão e consulta de usuários.
+NoteService: Gerencia operações relacionadas a notas, como criação, atualização, exclusão e consulta de notas.
+Modelos:
+
+User: Representa um usuário no sistema, incluindo detalhes como email, senha, nome, data de nascimento, etc.
+Note: Representa uma nota no sistema, incluindo título, corpo, criador, data de criação, e histórico de edições.
+Segurança:
+
+SecurityConfiguration: Configura a segurança da aplicação, definindo políticas de autorização e gerenciamento de sessão.
+JwtRequestFilter: Filtra todas as requisições para validar tokens JWT.
+CustomAuthenticationEntryPoint e CustomAccessDeniedHandler: Tratam casos de autenticação e autorização falhadas.
+Fluxo de Trabalho
+Registro:
+
+O usuário envia uma solicitação POST para /users/register com detalhes como email, senha, etc.
+UserService verifica se o email já existe e cria o usuário.
+Autenticação:
+
+O usuário envia uma solicitação POST para /users/authenticate com email e senha.
+UserService verifica as credenciais e, se corretas, JwtUtil gera um token JWT.
+O token é retornado ao usuário.
+Operações com Notas:
+
+O usuário autenticado envia uma solicitação POST para /notes com o token JWT no cabeçalho e os detalhes da nota no corpo.
+NoteService cria a nota e a associa ao usuário autenticado.
+Para visualizar, atualizar ou excluir notas, o usuário envia solicitações GET, PUT ou DELETE para /notes com o token JWT.

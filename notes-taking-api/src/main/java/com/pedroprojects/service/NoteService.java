@@ -1,0 +1,76 @@
+package com.pedroprojects.service;
+
+import com.pedroprojects.model.Note;
+import com.pedroprojects.model.User;
+import com.pedroprojects.repository.NoteRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.stereotype.Service;
+
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
+
+@Service
+public class NoteService {
+
+    @Autowired
+    private NoteRepository noteRepository;
+
+    @PreAuthorize("isAuthenticated()")
+    public List<Note> getNotesByUserAndDateRange(Long userId, LocalDateTime startDate, LocalDateTime endDate) {
+        if (startDate == null && endDate == null) {
+            return noteRepository.findByUser_Uid(userId);
+        }
+        if (startDate == null) {
+            startDate = LocalDateTime.MIN; // Epoch start
+        }
+        if (endDate == null) {
+            endDate = LocalDateTime.now(); // Current date
+        }
+        return noteRepository.findByUserUidAndCreatedAtBetween(userId, startDate, endDate);
+    }
+
+    public Note getNoteById(Long id) {
+        return noteRepository.findById(id).orElse(null);
+    }
+
+    @PreAuthorize("isAuthenticated()")
+    public Note createNote(Note note, User user) {
+        note.setUser(user);
+        note.setCreatedAt(LocalDateTime.now());
+        return noteRepository.save(note);
+    }
+
+    public Note updateNote(Long id, Note update) {
+        Note note = getNoteById(id);
+        if (note == null) {
+            return null;
+        }
+        if (update.getTitle() != null) {
+            note.setTitle(update.getTitle());
+        }
+        if (update.getBody() != null) {
+            note.setBody(update.getBody());
+        }
+        if (update.getCreatedBy() != null) {
+            if (note.getEditHistory() == null) {
+                note.setEditHistory(new ArrayList<>());
+            }
+            Note.EditHistory editHistory = new Note.EditHistory();
+            editHistory.setEditedBy(update.getCreatedBy());
+            editHistory.setEditedAt(LocalDateTime.now());
+            note.getEditHistory().add(editHistory);
+        }
+        note.setUpdatedAt(LocalDateTime.now());
+        return noteRepository.save(note);
+    }
+
+    public boolean deleteNoteById(Long id) {
+        if (noteRepository.existsById(id)) {
+            noteRepository.deleteById(id);
+            return true;
+        }
+        return false;
+    }
+}
