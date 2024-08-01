@@ -5,13 +5,15 @@ import com.pedroprojects.model.User;
 import com.pedroprojects.service.NoteService;
 import com.pedroprojects.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
-import java.util.List;
 
 @RestController
 @RequestMapping("/notes")
@@ -24,14 +26,17 @@ public class NoteController {
     private UserService userService;
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<List<Note>> getNotesByDateRange(
+    public ResponseEntity<Page<Note>> getNotesByDateRange(
             Authentication authentication,
             @RequestParam(required = false) LocalDateTime startDate,
-            @RequestParam(required = false) LocalDateTime endDate) {
+            @RequestParam(required = false) LocalDateTime endDate,
+            @RequestParam(defaultValue = "0") int page,
+            @RequestParam(defaultValue = "10") int size) {
         String email = authentication.getName();
         User user = userService.getUserByEmail(email)
                 .orElseThrow(() -> new RuntimeException("User not found"));
-        List<Note> notes = noteService.getNotesByUserAndDateRange(user.getUid(), startDate, endDate);
+        Pageable pageable = PageRequest.of(page, size);
+        Page<Note> notes = noteService.getNotesByUserAndDateRange(user.getUid(), startDate, endDate, pageable);
         return ResponseEntity.ok(notes);
     }
 

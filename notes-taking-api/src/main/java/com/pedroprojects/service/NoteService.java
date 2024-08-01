@@ -4,12 +4,13 @@ import com.pedroprojects.model.Note;
 import com.pedroprojects.model.User;
 import com.pedroprojects.repository.NoteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.List;
 
 @Service
 public class NoteService {
@@ -18,9 +19,9 @@ public class NoteService {
     private NoteRepository noteRepository;
 
     @PreAuthorize("isAuthenticated()")
-    public List<Note> getNotesByUserAndDateRange(Long userId, LocalDateTime startDate, LocalDateTime endDate) {
+    public Page<Note> getNotesByUserAndDateRange(Long userId, LocalDateTime startDate, LocalDateTime endDate, Pageable pageable) {
         if (startDate == null && endDate == null) {
-            return noteRepository.findByUser_Uid(userId);
+            return noteRepository.findByUser_Uid(userId, pageable);
         }
         if (startDate == null) {
             startDate = LocalDateTime.MIN; // Epoch start
@@ -28,7 +29,7 @@ public class NoteService {
         if (endDate == null) {
             endDate = LocalDateTime.now(); // Current date
         }
-        return noteRepository.findByUserUidAndCreatedAtBetween(userId, startDate, endDate);
+        return noteRepository.findByUserUidAndCreatedAtBetween(userId, startDate, endDate, pageable);
     }
 
     public Note getNoteById(Long id) {
