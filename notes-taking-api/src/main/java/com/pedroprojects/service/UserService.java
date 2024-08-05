@@ -59,7 +59,7 @@ public class UserService {
                 .orElseThrow(() -> new RuntimeException("User not found"));
 
         if (authentication.getAuthorities().stream().anyMatch(a -> a.getAuthority().equals("ROLE_ADMIN"))) {
-            // The admin can update data, but not password
+            // The administrator can update data, but not password
             if (update.getEmail() != null) {
                 currentUser.setEmail(update.getEmail());
             }

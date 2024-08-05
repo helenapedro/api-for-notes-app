@@ -7,21 +7,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 @Data
 @Entity
-@Table(name = "notes") 
+@Table(name = "notes")
 public class Note {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long nid;
 
     private String title;
-    
-    @Column(columnDefinition = "TEXT")
     private String body;
-    
     private String createdBy;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;

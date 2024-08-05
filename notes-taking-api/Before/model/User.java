@@ -6,8 +6,6 @@ import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
-
 @Data
 @Entity
 @Table(name = "users")
@@ -21,7 +19,7 @@ public class User {
     private String firstname;
     private String lastname;
     private LocalDateTime createdAt;
-    private LocalDateTime updatedAt; 
+    private LocalDateTime updatedAt;
     private Date birthday;
     private String gender;
     private String phoneNumber;
