@@ -1,0 +1,569 @@
+2024-08-06 15:03:25.425 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-08-06 15:03:25.470 [restartedMain] INFO  com.pedroprojects.NotesApplication - Starting NotesApplication using Java 21.0.3 with PID 22388 (C:\Users\mbeua\git\api-for-notes-app\notes-taking-api\target\classes started by mbeua in C:\Users\mbeua\git\api-for-notes-app\notes-taking-api)
+2024-08-06 15:03:25.470 [restartedMain] INFO  com.pedroprojects.NotesApplication - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 15:03:25.515 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-08-06 15:03:25.515 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-08-06 15:03:26.640 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-06 15:03:26.702 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 56 ms. Found 3 JPA repository interfaces.
+2024-08-06 15:03:27.585 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-08-06 15:03:27.601 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-08-06 15:03:27.606 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-08-06 15:03:27.606 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-06 15:03:27.660 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-08-06 15:03:27.660 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2144 ms
+2024-08-06 15:03:27.730 [restartedMain] INFO  c.d.f.u.DynatraceFileBasedConfigurationProvider - File based configuration does not exist, serving default config.
+2024-08-06 15:03:27.732 [restartedMain] INFO  i.m.dynatrace.DynatraceMeterRegistry - Exporting to Dynatrace metrics API v2
+2024-08-06 15:03:27.733 [restartedMain] INFO  i.m.dynatrace.v2.DynatraceExporterV2 - Exporting to endpoint http://localhost:14499/metrics/ingest
+2024-08-06 15:03:27.736 [restartedMain] INFO  c.d.m.util.DynatraceMetadataEnricher - Indirection file not found. This is normal if OneAgent is not installed.
+2024-08-06 15:03:27.736 [restartedMain] WARN  c.d.m.u.MetricLinePreConfiguration - Received empty Dynatrace metadata dimensions. Continuing without Dynatrace metadata.
+2024-08-06 15:03:27.740 [restartedMain] INFO  i.m.c.i.push.PushMeterRegistry - publishing metrics for DynatraceMeterRegistry every 1m
+2024-08-06 15:03:27.859 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-08-06 15:03:30.716 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@67d5c647
+2024-08-06 15:03:30.721 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-08-06 15:03:30.749 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:mysql://195.35.61.56:3306/u894841105_employees_db'
+2024-08-06 15:03:30.929 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-06 15:03:30.990 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-06 15:03:31.026 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-08-06 15:03:31.341 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-06 15:03:31.928 [restartedMain] WARN  org.hibernate.dialect.Dialect - HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-08-06 15:03:32.917 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-06 15:03:37.829 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-06 15:03:38.343 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-08-06 15:03:38.343 [restartedMain] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-08-06 15:03:38.492 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-06 15:03:39.105 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 15 endpoints beneath base path '/actuator'
+2024-08-06 15:03:39.415 [restartedMain] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-08-06 15:03:39.745 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-08-06 15:03:39.826 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-08-06 15:03:39.844 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-08-06 15:03:39.854 [restartedMain] INFO  com.pedroprojects.NotesApplication - Started NotesApplication in 14.94 seconds (process running for 15.919)
+2024-08-06 15:03:40.926 [RMI TCP Connection(10)-127.0.0.1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-06 15:03:40.926 [RMI TCP Connection(10)-127.0.0.1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-08-06 15:03:40.928 [RMI TCP Connection(10)-127.0.0.1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2024-08-06 15:04:17.959 [dynatrace-metrics-publisher] WARN  i.m.dynatrace.v2.DynatraceExporterV2 - Failed metric ingestion: java.net.ConnectException: Connection refused: getsockopt
+2024-08-06 15:04:17.960 [dynatrace-metrics-publisher] WARN  i.m.d.v.WarnThenDebugLoggers$StackTraceLogger - Stack trace for previous 'Failed metric ingestion' warning log: Connection refused: getsockopt Note that subsequent logs will be logged at debug level.
+java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:531)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:636)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:280)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:386)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:408)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1304)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1237)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1123)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1052)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(HttpURLConnection.java:1446)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getOutputStream(HttpURLConnection.java:1417)
+	at io.micrometer.core.ipc.http.HttpUrlConnectionSender.send(HttpUrlConnectionSender.java:98)
+	at io.micrometer.core.ipc.http.HttpSender$Request$Builder.send(HttpSender.java:306)
+	at io.micrometer.dynatrace.v2.DynatraceExporterV2.send(DynatraceExporterV2.java:432)
+	at io.micrometer.dynatrace.v2.DynatraceExporterV2.export(DynatraceExporterV2.java:189)
+	at io.micrometer.dynatrace.DynatraceMeterRegistry.publish(DynatraceMeterRegistry.java:98)
+	at io.micrometer.core.instrument.push.PushMeterRegistry.publishSafelyOrSkipIfInProgress(PushMeterRegistry.java:64)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:358)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-08-06 15:05:17.608 [dynatrace-metrics-publisher] WARN  i.m.dynatrace.v2.DynatraceExporterV2 - Failed metric ingestion: java.net.ConnectException: Connection refused: getsockopt
+2024-08-06 15:06:17.632 [dynatrace-metrics-publisher] WARN  i.m.dynatrace.v2.DynatraceExporterV2 - Failed metric ingestion: java.net.ConnectException: Connection refused: getsockopt
+2024-08-06 15:07:17.595 [dynatrace-metrics-publisher] WARN  i.m.dynatrace.v2.DynatraceExporterV2 - Failed metric ingestion: java.net.ConnectException: Connection refused: getsockopt
+2024-08-06 15:08:17.616 [dynatrace-metrics-publisher] WARN  i.m.dynatrace.v2.DynatraceExporterV2 - Failed metric ingestion: java.net.ConnectException: Connection refused: getsockopt
+2024-08-06 15:08:40.746 [RMI TCP Connection(17)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-08-06 15:08:40.793 [RMI TCP Connection(17)-127.0.0.1] WARN  i.m.dynatrace.v2.DynatraceExporterV2 - Failed metric ingestion: java.net.ConnectException: Connection refused: getsockopt
+2024-08-06 15:08:40.808 [RMI TCP Connection(17)-127.0.0.1] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2024-08-06 15:08:40.826 [RMI TCP Connection(17)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-06 15:08:40.833 [RMI TCP Connection(17)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-08-06 15:08:40.858 [RMI TCP Connection(17)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-08-06 15:09:25.038 [restartedMain] INFO  com.pedroprojects.NotesApplication - Starting NotesApplication using Java 21.0.3 with PID 23872 (C:\Users\mbeua\git\api-for-notes-app\notes-taking-api\target\classes started by mbeua in C:\Users\mbeua\git\api-for-notes-app\notes-taking-api)
+2024-08-06 15:09:25.040 [restartedMain] INFO  com.pedroprojects.NotesApplication - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 15:09:25.090 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-08-06 15:09:25.091 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-08-06 15:09:26.257 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-06 15:09:26.325 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 62 ms. Found 3 JPA repository interfaces.
+2024-08-06 15:09:27.204 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-08-06 15:09:27.218 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-08-06 15:09:27.218 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-06 15:09:27.277 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-08-06 15:09:27.277 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2186 ms
+2024-08-06 15:09:27.356 [restartedMain] INFO  c.d.f.u.DynatraceFileBasedConfigurationProvider - File based configuration does not exist, serving default config.
+2024-08-06 15:09:27.358 [restartedMain] INFO  i.m.dynatrace.DynatraceMeterRegistry - Exporting to Dynatrace metrics API v2
+2024-08-06 15:09:27.362 [restartedMain] INFO  i.m.dynatrace.v2.DynatraceExporterV2 - Exporting to endpoint http://localhost:14499/metrics/ingest
+2024-08-06 15:09:27.366 [restartedMain] INFO  c.d.m.util.DynatraceMetadataEnricher - Indirection file not found. This is normal if OneAgent is not installed.
+2024-08-06 15:09:27.366 [restartedMain] WARN  c.d.m.u.MetricLinePreConfiguration - Received empty Dynatrace metadata dimensions. Continuing without Dynatrace metadata.
+2024-08-06 15:09:27.371 [restartedMain] INFO  i.m.c.i.push.PushMeterRegistry - publishing metrics for DynatraceMeterRegistry every 1m
+2024-08-06 15:09:27.510 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-08-06 15:09:30.302 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@64d7610d
+2024-08-06 15:09:30.305 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-08-06 15:09:30.328 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:mysql://195.35.61.56:3306/u894841105_employees_db'
+2024-08-06 15:09:30.534 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-06 15:09:30.605 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-06 15:09:30.649 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-08-06 15:09:30.965 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-06 15:09:31.564 [restartedMain] WARN  org.hibernate.dialect.Dialect - HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-08-06 15:09:32.550 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-06 15:09:37.485 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-06 15:09:38.052 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-08-06 15:09:38.054 [restartedMain] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-08-06 15:09:38.258 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-06 15:09:38.871 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 15 endpoints beneath base path '/actuator'
+2024-08-06 15:09:39.234 [restartedMain] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-08-06 15:09:39.554 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-08-06 15:09:39.658 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-08-06 15:09:39.675 [restartedMain] INFO  com.pedroprojects.NotesApplication - Started NotesApplication in 15.179 seconds (process running for 16.514)
+2024-08-06 15:09:40.677 [RMI TCP Connection(10)-127.0.0.1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-06 15:09:40.677 [RMI TCP Connection(10)-127.0.0.1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-08-06 15:09:40.680 [RMI TCP Connection(10)-127.0.0.1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2024-08-06 15:10:29.978 [dynatrace-metrics-publisher] WARN  i.m.dynatrace.v2.DynatraceExporterV2 - Failed metric ingestion: java.net.ConnectException: Connection refused: getsockopt
+2024-08-06 15:10:29.980 [dynatrace-metrics-publisher] WARN  i.m.d.v.WarnThenDebugLoggers$StackTraceLogger - Stack trace for previous 'Failed metric ingestion' warning log: Connection refused: getsockopt Note that subsequent logs will be logged at debug level.
+java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:531)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:636)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:280)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:386)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:408)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1304)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1237)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1123)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1052)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(HttpURLConnection.java:1446)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getOutputStream(HttpURLConnection.java:1417)
+	at io.micrometer.core.ipc.http.HttpUrlConnectionSender.send(HttpUrlConnectionSender.java:98)
+	at io.micrometer.core.ipc.http.HttpSender$Request$Builder.send(HttpSender.java:306)
+	at io.micrometer.dynatrace.v2.DynatraceExporterV2.send(DynatraceExporterV2.java:432)
+	at io.micrometer.dynatrace.v2.DynatraceExporterV2.export(DynatraceExporterV2.java:189)
+	at io.micrometer.dynatrace.DynatraceMeterRegistry.publish(DynatraceMeterRegistry.java:98)
+	at io.micrometer.core.instrument.push.PushMeterRegistry.publishSafelyOrSkipIfInProgress(PushMeterRegistry.java:64)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:358)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-08-06 15:10:38.540 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-08-06 15:10:38.584 [Thread-8] WARN  i.m.dynatrace.v2.DynatraceExporterV2 - Failed metric ingestion: java.net.ConnectException: Connection refused: getsockopt
+2024-08-06 15:10:38.599 [Thread-8] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-06 15:10:38.601 [Thread-8] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-08-06 15:10:38.620 [Thread-8] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-08-06 15:10:38.726 [restartedMain] INFO  com.pedroprojects.NotesApplication - Starting NotesApplication using Java 21.0.3 with PID 23872 (C:\Users\mbeua\git\api-for-notes-app\notes-taking-api\target\classes started by mbeua in C:\Users\mbeua\git\api-for-notes-app\notes-taking-api)
+2024-08-06 15:10:38.726 [restartedMain] INFO  com.pedroprojects.NotesApplication - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 15:10:39.195 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-06 15:10:39.211 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 3 JPA repository interfaces.
+2024-08-06 15:10:39.441 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-08-06 15:10:39.442 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-08-06 15:10:39.442 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-06 15:10:39.472 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-08-06 15:10:39.472 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 744 ms
+2024-08-06 15:10:39.503 [restartedMain] INFO  i.m.dynatrace.DynatraceMeterRegistry - Exporting to Dynatrace metrics API v2
+2024-08-06 15:10:39.503 [restartedMain] INFO  i.m.dynatrace.v2.DynatraceExporterV2 - Exporting to endpoint http://localhost:14499/metrics/ingest
+2024-08-06 15:10:39.503 [restartedMain] INFO  c.d.m.util.DynatraceMetadataEnricher - Indirection file not found. This is normal if OneAgent is not installed.
+2024-08-06 15:10:39.503 [restartedMain] WARN  c.d.m.u.MetricLinePreConfiguration - Received empty Dynatrace metadata dimensions. Continuing without Dynatrace metadata.
+2024-08-06 15:10:39.504 [restartedMain] INFO  i.m.c.i.push.PushMeterRegistry - publishing metrics for DynatraceMeterRegistry every 1m
+2024-08-06 15:10:39.560 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2024-08-06 15:10:41.897 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@11b12d3c
+2024-08-06 15:10:41.897 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2024-08-06 15:10:41.909 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:mysql://195.35.61.56:3306/u894841105_employees_db'
+2024-08-06 15:10:42.032 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-06 15:10:42.036 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-08-06 15:10:42.054 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-06 15:10:42.290 [restartedMain] WARN  org.hibernate.dialect.Dialect - HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-08-06 15:10:42.463 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-06 15:10:46.841 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-06 15:10:47.060 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-08-06 15:10:47.061 [restartedMain] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-08-06 15:10:47.154 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-06 15:10:47.482 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 15 endpoints beneath base path '/actuator'
+2024-08-06 15:11:11.713 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-08-06 15:11:11.752 [restartedMain] INFO  com.pedroprojects.NotesApplication - Starting NotesApplication using Java 21.0.3 with PID 26828 (C:\Users\mbeua\git\api-for-notes-app\notes-taking-api\target\classes started by mbeua in C:\Users\mbeua\git\api-for-notes-app\notes-taking-api)
+2024-08-06 15:11:11.752 [restartedMain] INFO  com.pedroprojects.NotesApplication - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 15:11:11.796 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-08-06 15:11:11.796 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-08-06 15:11:12.835 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-06 15:11:12.901 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 60 ms. Found 3 JPA repository interfaces.
+2024-08-06 15:11:13.745 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-08-06 15:11:13.758 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-08-06 15:11:13.759 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-08-06 15:11:13.759 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-06 15:11:13.822 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-08-06 15:11:13.822 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2026 ms
+2024-08-06 15:11:13.891 [restartedMain] INFO  c.d.f.u.DynatraceFileBasedConfigurationProvider - File based configuration does not exist, serving default config.
+2024-08-06 15:11:13.893 [restartedMain] INFO  i.m.dynatrace.DynatraceMeterRegistry - Exporting to Dynatrace metrics API v2
+2024-08-06 15:11:13.894 [restartedMain] INFO  i.m.dynatrace.v2.DynatraceExporterV2 - Exporting to endpoint http://localhost:14499/metrics/ingest
+2024-08-06 15:11:13.897 [restartedMain] INFO  c.d.m.util.DynatraceMetadataEnricher - Indirection file not found. This is normal if OneAgent is not installed.
+2024-08-06 15:11:13.897 [restartedMain] WARN  c.d.m.u.MetricLinePreConfiguration - Received empty Dynatrace metadata dimensions. Continuing without Dynatrace metadata.
+2024-08-06 15:11:13.901 [restartedMain] INFO  i.m.c.i.push.PushMeterRegistry - publishing metrics for DynatraceMeterRegistry every 1m
+2024-08-06 15:11:14.036 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-08-06 15:11:16.794 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@36d24419
+2024-08-06 15:11:16.796 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-08-06 15:11:16.813 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:mysql://195.35.61.56:3306/u894841105_employees_db'
+2024-08-06 15:11:16.985 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-06 15:11:17.033 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-06 15:11:17.062 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-08-06 15:11:17.354 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-06 15:11:17.929 [restartedMain] WARN  org.hibernate.dialect.Dialect - HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-08-06 15:11:19.032 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-06 15:11:23.918 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-06 15:11:24.595 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-08-06 15:11:24.597 [restartedMain] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-08-06 15:11:24.822 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-06 15:11:25.803 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 15 endpoints beneath base path '/actuator'
+2024-08-06 15:11:26.190 [restartedMain] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-08-06 15:11:26.629 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-08-06 15:11:26.762 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-08-06 15:11:26.790 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-08-06 15:11:26.807 [restartedMain] INFO  com.pedroprojects.NotesApplication - Started NotesApplication in 15.531 seconds (process running for 16.421)
+2024-08-06 15:11:28.211 [RMI TCP Connection(8)-127.0.0.1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-06 15:11:28.211 [RMI TCP Connection(8)-127.0.0.1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-08-06 15:11:28.215 [RMI TCP Connection(8)-127.0.0.1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2024-08-06 15:12:36.331 [dynatrace-metrics-publisher] WARN  i.m.dynatrace.v2.DynatraceExporterV2 - Failed metric ingestion: java.net.ConnectException: Connection refused: getsockopt
+2024-08-06 15:12:36.332 [dynatrace-metrics-publisher] WARN  i.m.d.v.WarnThenDebugLoggers$StackTraceLogger - Stack trace for previous 'Failed metric ingestion' warning log: Connection refused: getsockopt Note that subsequent logs will be logged at debug level.
+java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:531)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:636)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:280)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:386)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:408)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1304)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1237)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1123)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1052)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(HttpURLConnection.java:1446)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getOutputStream(HttpURLConnection.java:1417)
+	at io.micrometer.core.ipc.http.HttpUrlConnectionSender.send(HttpUrlConnectionSender.java:98)
+	at io.micrometer.core.ipc.http.HttpSender$Request$Builder.send(HttpSender.java:306)
+	at io.micrometer.dynatrace.v2.DynatraceExporterV2.send(DynatraceExporterV2.java:432)
+	at io.micrometer.dynatrace.v2.DynatraceExporterV2.export(DynatraceExporterV2.java:189)
+	at io.micrometer.dynatrace.DynatraceMeterRegistry.publish(DynatraceMeterRegistry.java:98)
+	at io.micrometer.core.instrument.push.PushMeterRegistry.publishSafelyOrSkipIfInProgress(PushMeterRegistry.java:64)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:358)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-08-06 15:13:36.101 [dynatrace-metrics-publisher] WARN  i.m.dynatrace.v2.DynatraceExporterV2 - Failed metric ingestion: java.net.ConnectException: Connection refused: getsockopt
+2024-08-06 15:14:36.101 [dynatrace-metrics-publisher] WARN  i.m.dynatrace.v2.DynatraceExporterV2 - Failed metric ingestion: java.net.ConnectException: Connection refused: getsockopt
+2024-08-06 15:15:36.088 [dynatrace-metrics-publisher] WARN  i.m.dynatrace.v2.DynatraceExporterV2 - Failed metric ingestion: java.net.ConnectException: Connection refused: getsockopt
+2024-08-06 15:15:37.703 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-08-06 15:15:37.786 [Thread-8] WARN  i.m.dynatrace.v2.DynatraceExporterV2 - Failed metric ingestion: java.net.ConnectException: Connection refused: getsockopt
+2024-08-06 15:15:37.790 [Thread-8] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2024-08-06 15:15:37.800 [Thread-8] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-06 15:15:37.802 [Thread-8] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-08-06 15:15:37.818 [Thread-8] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-08-06 15:15:37.917 [restartedMain] INFO  com.pedroprojects.NotesApplication - Starting NotesApplication using Java 21.0.3 with PID 26828 (C:\Users\mbeua\git\api-for-notes-app\notes-taking-api\target\classes started by mbeua in C:\Users\mbeua\git\api-for-notes-app\notes-taking-api)
+2024-08-06 15:15:37.917 [restartedMain] INFO  com.pedroprojects.NotesApplication - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 15:15:38.313 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-06 15:15:38.331 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 3 JPA repository interfaces.
+2024-08-06 15:15:38.532 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-08-06 15:15:38.533 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-08-06 15:15:38.533 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-08-06 15:15:38.533 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-06 15:15:38.558 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-08-06 15:15:38.559 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 638 ms
+2024-08-06 15:15:38.589 [restartedMain] INFO  i.m.dynatrace.DynatraceMeterRegistry - Exporting to Dynatrace metrics API v2
+2024-08-06 15:15:38.589 [restartedMain] INFO  i.m.dynatrace.v2.DynatraceExporterV2 - Exporting to endpoint http://localhost:14499/metrics/ingest
+2024-08-06 15:15:38.589 [restartedMain] INFO  c.d.m.util.DynatraceMetadataEnricher - Indirection file not found. This is normal if OneAgent is not installed.
+2024-08-06 15:15:38.589 [restartedMain] WARN  c.d.m.u.MetricLinePreConfiguration - Received empty Dynatrace metadata dimensions. Continuing without Dynatrace metadata.
+2024-08-06 15:15:38.589 [restartedMain] INFO  i.m.c.i.push.PushMeterRegistry - publishing metrics for DynatraceMeterRegistry every 1m
+2024-08-06 15:15:38.651 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2024-08-06 15:15:41.097 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@75819804
+2024-08-06 15:15:41.097 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2024-08-06 15:15:41.120 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:mysql://195.35.61.56:3306/u894841105_employees_db'
+2024-08-06 15:15:41.195 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-06 15:15:41.198 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-08-06 15:15:41.207 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-06 15:15:41.461 [restartedMain] WARN  org.hibernate.dialect.Dialect - HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-08-06 15:15:41.592 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-06 15:15:46.378 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-06 15:15:46.562 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-08-06 15:15:46.563 [restartedMain] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-08-06 15:15:46.662 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-06 15:15:46.969 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 15 endpoints beneath base path '/actuator'
+2024-08-06 15:15:47.153 [restartedMain] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-08-06 15:15:47.354 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-08-06 15:15:47.382 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-08-06 15:15:47.389 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-08-06 15:15:47.398 [restartedMain] INFO  com.pedroprojects.NotesApplication - Started NotesApplication in 9.519 seconds (process running for 277.011)
+2024-08-06 15:15:47.882 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2024-08-06 15:16:04.627 [RMI TCP Connection(15)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-08-06 15:16:04.666 [RMI TCP Connection(15)-127.0.0.1] WARN  i.m.dynatrace.v2.DynatraceExporterV2 - Failed metric ingestion: java.net.ConnectException: Connection refused: getsockopt
+2024-08-06 15:16:04.666 [RMI TCP Connection(15)-127.0.0.1] WARN  i.m.d.v.WarnThenDebugLoggers$StackTraceLogger - Stack trace for previous 'Failed metric ingestion' warning log: Connection refused: getsockopt Note that subsequent logs will be logged at debug level.
+java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:531)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:636)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:280)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:386)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:408)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1304)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1237)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1123)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1052)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(HttpURLConnection.java:1446)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getOutputStream(HttpURLConnection.java:1417)
+	at io.micrometer.core.ipc.http.HttpUrlConnectionSender.send(HttpUrlConnectionSender.java:98)
+	at io.micrometer.core.ipc.http.HttpSender$Request$Builder.send(HttpSender.java:306)
+	at io.micrometer.dynatrace.v2.DynatraceExporterV2.send(DynatraceExporterV2.java:432)
+	at io.micrometer.dynatrace.v2.DynatraceExporterV2.export(DynatraceExporterV2.java:189)
+	at io.micrometer.dynatrace.DynatraceMeterRegistry.publish(DynatraceMeterRegistry.java:98)
+	at io.micrometer.core.instrument.step.StepMeterRegistry.close(StepMeterRegistry.java:150)
+	at org.springframework.boot.actuate.autoconfigure.metrics.MetricsAutoConfiguration$MeterRegistryCloser.onApplicationEvent(MetricsAutoConfiguration.java:94)
+	at org.springframework.boot.actuate.autoconfigure.metrics.MetricsAutoConfiguration$MeterRegistryCloser.onApplicationEvent(MetricsAutoConfiguration.java:82)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:452)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:385)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1139)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:174)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1102)
+	at org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown(SpringApplicationAdminMXBeanRegistrar.java:160)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at sun.reflect.misc.Trampoline.invoke(MethodUtil.java:64)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/sun.reflect.misc.MethodUtil.invoke(MethodUtil.java:97)
+	at java.management/com.sun.jmx.mbeanserver.ConvertingMethod.invokeWithOpenReturn(ConvertingMethod.java:193)
+	at java.management/com.sun.jmx.mbeanserver.ConvertingMethod.invokeWithOpenReturn(ConvertingMethod.java:175)
+	at java.management/com.sun.jmx.mbeanserver.MXBeanIntrospector.invokeM2(MXBeanIntrospector.java:115)
+	at java.management/com.sun.jmx.mbeanserver.MXBeanIntrospector.invokeM2(MXBeanIntrospector.java:52)
+	at java.management/com.sun.jmx.mbeanserver.MBeanIntrospector.invokeM(MBeanIntrospector.java:236)
+	at java.management/com.sun.jmx.mbeanserver.PerInterface.invoke(PerInterface.java:138)
+	at java.management/com.sun.jmx.mbeanserver.MBeanSupport.invoke(MBeanSupport.java:252)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:803)
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:802)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1472)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1310)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1405)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:829)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:714)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:598)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:844)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:721)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:720)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-08-06 15:16:04.693 [RMI TCP Connection(15)-127.0.0.1] WARN  i.m.dynatrace.v2.DynatraceExporterV2 - Failed metric ingestion: java.net.ConnectException: Connection refused: getsockopt
+2024-08-06 15:16:04.694 [RMI TCP Connection(15)-127.0.0.1] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2024-08-06 15:16:04.701 [RMI TCP Connection(15)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-06 15:16:04.702 [RMI TCP Connection(15)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2024-08-06 15:16:06.949 [RMI TCP Connection(15)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2024-08-06 15:16:18.014 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-08-06 15:16:18.060 [restartedMain] INFO  com.pedroprojects.NotesApplication - Starting NotesApplication using Java 21.0.3 with PID 23524 (C:\Users\mbeua\git\api-for-notes-app\notes-taking-api\target\classes started by mbeua in C:\Users\mbeua\git\api-for-notes-app\notes-taking-api)
+2024-08-06 15:16:18.061 [restartedMain] INFO  com.pedroprojects.NotesApplication - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 15:16:18.107 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-08-06 15:16:18.107 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-08-06 15:16:19.155 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-06 15:16:19.213 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 52 ms. Found 3 JPA repository interfaces.
+2024-08-06 15:16:20.030 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-08-06 15:16:20.044 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-08-06 15:16:20.046 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-08-06 15:16:20.046 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-06 15:16:20.108 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-08-06 15:16:20.108 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2001 ms
+2024-08-06 15:16:20.177 [restartedMain] INFO  c.d.f.u.DynatraceFileBasedConfigurationProvider - File based configuration does not exist, serving default config.
+2024-08-06 15:16:20.179 [restartedMain] INFO  i.m.dynatrace.DynatraceMeterRegistry - Exporting to Dynatrace metrics API v2
+2024-08-06 15:16:20.180 [restartedMain] INFO  i.m.dynatrace.v2.DynatraceExporterV2 - Exporting to endpoint http://localhost:14499/metrics/ingest
+2024-08-06 15:16:20.182 [restartedMain] INFO  c.d.m.util.DynatraceMetadataEnricher - Indirection file not found. This is normal if OneAgent is not installed.
+2024-08-06 15:16:20.182 [restartedMain] WARN  c.d.m.u.MetricLinePreConfiguration - Received empty Dynatrace metadata dimensions. Continuing without Dynatrace metadata.
+2024-08-06 15:16:20.185 [restartedMain] INFO  i.m.c.i.push.PushMeterRegistry - publishing metrics for DynatraceMeterRegistry every 1m
+2024-08-06 15:16:20.308 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-08-06 15:16:23.073 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7794b683
+2024-08-06 15:16:23.077 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-08-06 15:16:23.111 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:mysql://195.35.61.56:3306/u894841105_employees_db'
+2024-08-06 15:16:23.308 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-06 15:16:23.358 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-06 15:16:23.386 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-08-06 15:16:23.708 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-06 15:16:24.268 [restartedMain] WARN  org.hibernate.dialect.Dialect - HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-08-06 15:16:25.284 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-06 15:16:30.276 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-06 15:16:30.784 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-08-06 15:16:30.785 [restartedMain] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-08-06 15:16:30.966 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-06 15:16:31.618 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 15 endpoints beneath base path '/actuator'
+2024-08-06 15:16:31.994 [restartedMain] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-08-06 15:16:32.350 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-08-06 15:16:32.428 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-08-06 15:16:32.446 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-08-06 15:16:32.459 [restartedMain] INFO  com.pedroprojects.NotesApplication - Started NotesApplication in 14.891 seconds (process running for 15.836)
+2024-08-06 15:16:33.632 [RMI TCP Connection(10)-127.0.0.1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-06 15:16:33.632 [RMI TCP Connection(10)-127.0.0.1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-08-06 15:16:33.634 [RMI TCP Connection(10)-127.0.0.1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2024-08-06 15:16:34.830 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-08-06 15:16:35.188 [Thread-8] WARN  i.m.dynatrace.v2.DynatraceExporterV2 - Failed metric ingestion: java.net.ConnectException: Connection refused: getsockopt
+2024-08-06 15:16:35.190 [Thread-8] WARN  i.m.d.v.WarnThenDebugLoggers$StackTraceLogger - Stack trace for previous 'Failed metric ingestion' warning log: Connection refused: getsockopt Note that subsequent logs will be logged at debug level.
+java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:531)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:636)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:280)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:386)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:408)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1304)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1237)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1123)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1052)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(HttpURLConnection.java:1446)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getOutputStream(HttpURLConnection.java:1417)
+	at io.micrometer.core.ipc.http.HttpUrlConnectionSender.send(HttpUrlConnectionSender.java:98)
+	at io.micrometer.core.ipc.http.HttpSender$Request$Builder.send(HttpSender.java:306)
+	at io.micrometer.dynatrace.v2.DynatraceExporterV2.send(DynatraceExporterV2.java:432)
+	at io.micrometer.dynatrace.v2.DynatraceExporterV2.export(DynatraceExporterV2.java:189)
+	at io.micrometer.dynatrace.DynatraceMeterRegistry.publish(DynatraceMeterRegistry.java:98)
+	at io.micrometer.core.instrument.push.PushMeterRegistry.publishSafelyOrSkipIfInProgress(PushMeterRegistry.java:64)
+	at io.micrometer.core.instrument.push.PushMeterRegistry.close(PushMeterRegistry.java:144)
+	at io.micrometer.core.instrument.step.StepMeterRegistry.close(StepMeterRegistry.java:163)
+	at org.springframework.boot.actuate.autoconfigure.metrics.MetricsAutoConfiguration$MeterRegistryCloser.onApplicationEvent(MetricsAutoConfiguration.java:94)
+	at org.springframework.boot.actuate.autoconfigure.metrics.MetricsAutoConfiguration$MeterRegistryCloser.onApplicationEvent(MetricsAutoConfiguration.java:82)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:452)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:385)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1139)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:174)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1102)
+	at org.springframework.boot.devtools.restart.Restarter.stop(Restarter.java:308)
+	at org.springframework.boot.devtools.restart.Restarter.lambda$restart$1(Restarter.java:250)
+	at org.springframework.boot.devtools.restart.Restarter$LeakSafeThread.run(Restarter.java:607)
+2024-08-06 15:16:35.195 [Thread-8] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2024-08-06 15:16:35.206 [Thread-8] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-06 15:16:35.209 [Thread-8] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-08-06 15:16:37.254 [Thread-8] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-08-06 15:16:37.355 [restartedMain] INFO  com.pedroprojects.NotesApplication - Starting NotesApplication using Java 21.0.3 with PID 23524 (C:\Users\mbeua\git\api-for-notes-app\notes-taking-api\target\classes started by mbeua in C:\Users\mbeua\git\api-for-notes-app\notes-taking-api)
+2024-08-06 15:16:37.355 [restartedMain] INFO  com.pedroprojects.NotesApplication - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 15:16:37.895 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-06 15:16:37.929 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 33 ms. Found 3 JPA repository interfaces.
+2024-08-06 15:16:38.263 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-08-06 15:16:38.264 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-08-06 15:16:38.264 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-08-06 15:16:38.264 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-06 15:16:38.295 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-08-06 15:16:38.295 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 938 ms
+2024-08-06 15:16:38.330 [restartedMain] INFO  i.m.dynatrace.DynatraceMeterRegistry - Exporting to Dynatrace metrics API v2
+2024-08-06 15:16:38.330 [restartedMain] INFO  i.m.dynatrace.v2.DynatraceExporterV2 - Exporting to endpoint http://localhost:14499/metrics/ingest
+2024-08-06 15:16:38.331 [restartedMain] INFO  c.d.m.util.DynatraceMetadataEnricher - Indirection file not found. This is normal if OneAgent is not installed.
+2024-08-06 15:16:38.331 [restartedMain] WARN  c.d.m.u.MetricLinePreConfiguration - Received empty Dynatrace metadata dimensions. Continuing without Dynatrace metadata.
+2024-08-06 15:16:38.331 [restartedMain] INFO  i.m.c.i.push.PushMeterRegistry - publishing metrics for DynatraceMeterRegistry every 1m
+2024-08-06 15:16:38.390 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2024-08-06 15:16:40.748 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@69a75421
+2024-08-06 15:16:40.748 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2024-08-06 15:16:40.771 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:mysql://195.35.61.56:3306/u894841105_employees_db'
+2024-08-06 15:16:40.877 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-06 15:16:40.881 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-08-06 15:16:40.893 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-06 15:16:41.138 [restartedMain] WARN  org.hibernate.dialect.Dialect - HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-08-06 15:16:41.296 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-06 15:17:08.024 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-08-06 15:17:08.057 [restartedMain] INFO  com.pedroprojects.NotesApplication - Starting NotesApplication using Java 21.0.3 with PID 19768 (C:\Users\mbeua\git\api-for-notes-app\notes-taking-api\target\classes started by mbeua in C:\Users\mbeua\git\api-for-notes-app\notes-taking-api)
+2024-08-06 15:17:08.058 [restartedMain] INFO  com.pedroprojects.NotesApplication - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 15:17:08.100 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-08-06 15:17:08.100 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-08-06 15:17:09.167 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-06 15:17:09.227 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 54 ms. Found 3 JPA repository interfaces.
+2024-08-06 15:17:10.045 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-08-06 15:17:10.055 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-08-06 15:17:10.056 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-08-06 15:17:10.056 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-06 15:17:10.119 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-08-06 15:17:10.120 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2018 ms
+2024-08-06 15:17:10.210 [restartedMain] INFO  c.d.f.u.DynatraceFileBasedConfigurationProvider - File based configuration does not exist, serving default config.
+2024-08-06 15:17:10.213 [restartedMain] INFO  i.m.dynatrace.DynatraceMeterRegistry - Exporting to Dynatrace metrics API v2
+2024-08-06 15:17:10.214 [restartedMain] INFO  i.m.dynatrace.v2.DynatraceExporterV2 - Exporting to endpoint http://localhost:14499/metrics/ingest
+2024-08-06 15:17:10.218 [restartedMain] INFO  c.d.m.util.DynatraceMetadataEnricher - Indirection file not found. This is normal if OneAgent is not installed.
+2024-08-06 15:17:10.218 [restartedMain] WARN  c.d.m.u.MetricLinePreConfiguration - Received empty Dynatrace metadata dimensions. Continuing without Dynatrace metadata.
+2024-08-06 15:17:10.222 [restartedMain] INFO  i.m.c.i.push.PushMeterRegistry - publishing metrics for DynatraceMeterRegistry every 1m
+2024-08-06 15:17:10.348 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-08-06 15:17:13.123 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@280c6bfc
+2024-08-06 15:17:13.128 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-08-06 15:17:13.165 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:mysql://195.35.61.56:3306/u894841105_employees_db'
+2024-08-06 15:17:13.344 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-06 15:17:13.391 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-06 15:17:13.420 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-08-06 15:17:13.665 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-06 15:17:14.251 [restartedMain] WARN  org.hibernate.dialect.Dialect - HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-08-06 15:17:15.156 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-06 15:17:20.055 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-06 15:17:20.512 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-08-06 15:17:20.517 [restartedMain] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-08-06 15:17:20.675 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-06 15:17:21.270 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 15 endpoints beneath base path '/actuator'
+2024-08-06 15:17:21.601 [restartedMain] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-08-06 15:17:21.914 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-08-06 15:17:21.987 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-08-06 15:17:22.005 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-08-06 15:17:22.016 [restartedMain] INFO  com.pedroprojects.NotesApplication - Started NotesApplication in 14.407 seconds (process running for 15.378)
+2024-08-06 15:17:22.825 [RMI TCP Connection(8)-127.0.0.1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-06 15:17:22.825 [RMI TCP Connection(8)-127.0.0.1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-08-06 15:17:22.826 [RMI TCP Connection(8)-127.0.0.1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-08-06 15:18:35.047 [dynatrace-metrics-publisher] WARN  i.m.dynatrace.v2.DynatraceExporterV2 - Failed metric ingestion: java.net.ConnectException: Connection refused: getsockopt
+2024-08-06 15:18:35.047 [dynatrace-metrics-publisher] WARN  i.m.d.v.WarnThenDebugLoggers$StackTraceLogger - Stack trace for previous 'Failed metric ingestion' warning log: Connection refused: getsockopt Note that subsequent logs will be logged at debug level.
+java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:531)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:636)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:280)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:386)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:408)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1304)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1237)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1123)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1052)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(HttpURLConnection.java:1446)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getOutputStream(HttpURLConnection.java:1417)
+	at io.micrometer.core.ipc.http.HttpUrlConnectionSender.send(HttpUrlConnectionSender.java:98)
+	at io.micrometer.core.ipc.http.HttpSender$Request$Builder.send(HttpSender.java:306)
+	at io.micrometer.dynatrace.v2.DynatraceExporterV2.send(DynatraceExporterV2.java:432)
+	at io.micrometer.dynatrace.v2.DynatraceExporterV2.export(DynatraceExporterV2.java:189)
+	at io.micrometer.dynatrace.DynatraceMeterRegistry.publish(DynatraceMeterRegistry.java:98)
+	at io.micrometer.core.instrument.push.PushMeterRegistry.publishSafelyOrSkipIfInProgress(PushMeterRegistry.java:64)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:358)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)

@@ -139,9 +139,12 @@
 			<groupId>io.micrometer</groupId>
     		<artifactId>micrometer-registry-dynatrace</artifactId>
 		</dependency>
-
-
 		
+		<dependency>
+    		<groupId>ch.qos.logback</groupId>
+    		<artifactId>logback-classic</artifactId>
+		</dependency>
+	
 	</dependencies>
 
 	<build>
