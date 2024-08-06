@@ -1,4 +1,5 @@
 package com.pedroprojects.service;
+// user service handles user creation and retrieval
 
 import com.pedroprojects.model.User;
 import com.pedroprojects.model.Role;

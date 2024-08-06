@@ -1,10 +1,8 @@
 package com.pedroprojects.dto;
 
-public class AuthenticateUserDto {
-
+public class AuthRequest {
     private String email;
     private String password;
-
 
     public String getEmail() {
         return email;

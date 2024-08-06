@@ -58,10 +58,10 @@ public class SecurityConfiguration {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.csrf(csrf -> csrf.disable())
             .authorizeHttpRequests(auth -> auth
-                .requestMatchers("/register", "/auth/login").permitAll() // Permite acesso público ao endpoint de registro e login
-                .requestMatchers("/users/**").hasRole("ADMIN") // Somente admin pode acessar endpoints relacionados a usuários
-                .requestMatchers("/notes/**").authenticated() // Todos os endpoints de notas requerem autenticação
-                .anyRequest().authenticated() // Todos os outros endpoints requerem autenticação
+                .requestMatchers("/register", "/auth/login").permitAll()
+                .requestMatchers("/users/**").hasRole("ADMIN")
+                .requestMatchers("/notes/**").authenticated()
+                .anyRequest().authenticated()
             )
             .exceptionHandling(exceptionHandling -> exceptionHandling
                 .authenticationEntryPoint(customAuthenticationEntryPoint)
